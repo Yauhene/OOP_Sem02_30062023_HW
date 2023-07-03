@@ -14,6 +14,7 @@ import java.util.List;
  Абстракция дикого животного
  */
 public class WildAnimal extends Animal implements Animals {
+
     public WildAnimal() {
     }
 

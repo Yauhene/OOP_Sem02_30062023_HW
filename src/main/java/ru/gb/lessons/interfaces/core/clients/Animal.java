@@ -5,7 +5,6 @@ import ru.gb.lessons.interfaces.core.clients.supports.Record;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 
 /**
@@ -13,6 +12,10 @@ import java.util.List;
  */
 public abstract class Animal {
     protected final String CLASS_NAME = "The " + getClass().getSimpleName();
+    public Boolean rDesire = null;
+    public Boolean flyDesire = null;
+    public Boolean swimDesire = null;
+    public Boolean speekDesire = null;
     //Поля класса отвечают за СОСТОЯНИЕ объекта
     protected int id; //идентификатор животного для хранения в БД
     protected String name; // кличка животного
@@ -86,7 +89,7 @@ public abstract class Animal {
     }
 
     public String getName() {
-        return name;
+        return this.name;
     }
 
     public void setName(String name) {
@@ -124,6 +127,9 @@ public abstract class Animal {
     public void setRecords(List<Record> records) {
         this.records = records;
     }
+//    public Boolean getFlyDesire() {
+//        return flyDesire;
+//    }
     @Override
         public String toString() {
             return CLASS_NAME + "{" +
@@ -133,9 +139,28 @@ public abstract class Animal {
                     ", registrationDate=" + registrationDate +
                     ", owner=" + owner +
                     ", records=" + records +
+                    ", run disire=" + rDesire +
+                    ", speak disire=" + speekDesire +
+                    ", swim disire=" + swimDesire +
+                    ", fly disire=" + flyDesire +
                     '}';
         }
     public String getClassName() {
         return this.CLASS_NAME;
-    }    
+    }
+    public Boolean getFlyDesire() {
+        return this.flyDesire;
+    }
+    public Boolean getSwimDesire() {
+        return this.swimDesire;
+    }
+    public Boolean getSpeekDesire() {
+        return this.speekDesire;
+    }
+    public Boolean getRunDesire() {
+        return this.rDesire;
+    }
+//    public String getName(){
+//        return this.name;
+//    }
 }

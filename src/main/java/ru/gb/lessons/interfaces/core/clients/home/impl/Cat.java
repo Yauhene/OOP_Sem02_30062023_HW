@@ -20,10 +20,18 @@ public class Cat extends Pet  implements Flyable, Runnable, Soundable, Swimable 
     int swimSpeed = 5;
     String swimReaction = " Терпеть не могу плавать! Но раз надо... ";
     public Cat() {
+        rDesire = true;
+        flyDesire = false;
+        swimDesire = false;
+        speekDesire = true;
     }
 
     public Cat(int id, String name, int numberOfLimbs, LocalDate registrationDate, Owner owner) {
         super(id, name, numberOfLimbs, registrationDate, owner);
+        rDesire = true;
+        flyDesire = false;
+        swimDesire = false;
+        speekDesire = true;
     }
 
     @Override

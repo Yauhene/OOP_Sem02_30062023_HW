@@ -11,10 +11,18 @@ import java.time.LocalDate;
  */
 public class WildCat extends WildAnimal implements Runnable {
     public WildCat() {
+        rDesire = true;
+        flyDesire = false;
+        swimDesire = false;
+        speekDesire = true;
     }
 
     public WildCat(int id, int numberOfLimbs, LocalDate registrationDate, Owner owner) {
         super(id, numberOfLimbs, registrationDate, owner);
+        rDesire = true;
+        flyDesire = false;
+        swimDesire = false;
+        speekDesire = true;
     }
 
     @Override

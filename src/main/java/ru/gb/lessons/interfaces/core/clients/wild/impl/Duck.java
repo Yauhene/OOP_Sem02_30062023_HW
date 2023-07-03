@@ -16,11 +16,24 @@ public class Duck extends WildAnimal implements Flyable, Runnable, Soundable, Sw
     String speeks = "Quack-quack!";
     int swimSpeed = 25;
     String swimReaction = "Я плаваю с удовольствием!";
+
+
+
+
     public Duck() {
+        rDesire = true;
+        flyDesire = true;
+        swimDesire = true;
+        speekDesire = true;
     }
 
-    public Duck(int id, int numberOfLimbs, LocalDate registrationDate, Owner owner) {
+    public Duck(int id, int numberOfLimbs, String name, LocalDate registrationDate, Owner owner) {
         super(id, numberOfLimbs, registrationDate, owner);
+        rDesire = true;
+        flyDesire = true;
+        swimDesire = true;
+        speekDesire = true;
+        this.name = name;
     }
 
     @Override
